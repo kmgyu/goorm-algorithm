@@ -73,10 +73,8 @@ public class Task4 {
         natural = country[0];
 
         int ans = 0;
-        // 진짜 내 languagePool 왜 작동안하냐고 왜 이렇게 해야되냐고 난 이렇게하기 실닿고!!!!!!!
-        for (int i = 1; i <= 10; i++) {
-            if (i == natural) continue;
-            ans = Math.max(ans, bfs(i));
+        for (int lan : languagePool) {
+            ans = Math.max(ans, bfs(lan));
         }
 
         System.out.println(ans);
